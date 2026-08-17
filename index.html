@@ -827,7 +827,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: minmax(360px, 420px) 1fr;
   gap: 64px;
   align-items: start;
 }
@@ -838,13 +838,10 @@
 =========================== */
 
 .about-photo {
-  position: relative;
-  overflow: hidden;
-  background: var(--blue-50);
-  border-radius: var(--radius-xl);
-  aspect-ratio: 3 / 4;
-  border: 1px solid var(--gray-200);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .about-photo img {
@@ -852,10 +849,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 35%;
   transition: transform 0.4s ease;
 }
-
 .about-photo:hover img {
   transform: scale(1.02);
 }
